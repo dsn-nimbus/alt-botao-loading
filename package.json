@@ -1,6 +1,6 @@
 {
   "name": "alt-botao-loading",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "main": "dist/alt-botao-loading.min.js",
   "scripts": {
     "test": "gulp coverage"

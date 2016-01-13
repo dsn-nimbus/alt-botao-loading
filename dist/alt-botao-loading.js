@@ -3,12 +3,8 @@
 
   ng.module('alt.botao-loading', [])
     .directive('altBotaoLoading', ['$timeout', function($timeout) {
-      var _scope = {
-        tempoLoading: '@'
-      };
-
       var _link = function(scope, element, attrs) {
-        var TEMPO_LOADING = scope.tempoLoading ? ~~scope.tempoLoading : 2000;
+        var TEMPO_LOADING = attrs.tempoLoading ? ~~attrs.tempoLoading : 2000;
 
         element.on('click', function() {
           element.prop('disabled', true);
@@ -22,7 +18,6 @@
       var _restrict = 'A';
 
       return {
-        scope: _scope,
         link: _link,
         restrict: _restrict
       }
